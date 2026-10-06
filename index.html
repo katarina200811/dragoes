@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo de Dragões</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>🐉 Catálogo de Dragões</h1>
+
+        <p>
+            Explore criaturas lendárias e descubra seus poderes,
+            habitats e características.
+        </p>
+
+        <input
+            type="text"
+            id="pesquisa"
+            placeholder="🔎 Pesquisar dragão..."
+        >
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>✨ Dragões lendários</h2>
+
+            <div class="catalogo">
+
+
+                <!-- DRAGÃO VERMELHO -->
+
+                <article class="criatura">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dalle-3_Dragon.jpg"
+                        alt="Dragão vermelho"
+                    >
+
+                    <div class="informacoes">
+
+                        <h3>Dragão Vermelho</h3>
+
+                        <p class="tipo">
+                            🔥 Dragão de Fogo
+                        </p>
+
+                        <p>
+                            Uma criatura poderosa conhecida por
+                            controlar o fogo e viver em regiões
+                            montanhosas.
+                        </p>
+
+                        <button
+                            class="btn-detalhes"
+                            data-nome="Dragão Vermelho"
+                            data-tipo="🔥 Dragão de Fogo"
+                            data-descricao="Um dos dragões mais poderosos. É conhecido por controlar chamas, possuir grande força e proteger seu território."
+                            data-habitat="Montanhas e vulcões"
+                            data-poder="Controle do fogo"
+                        >
+                            Ver detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- DRAGÃO NEGRO -->
+
+                <article class="criatura">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Chinese_black_dragon.svg"
+                        alt="Dragão negro"
+                    >
+
+                    <div class="informacoes">
+
+                        <h3>Dragão Negro</h3>
+
+                        <p class="tipo">
+                            🌑 Dragão das Sombras
+                        </p>
+
+                        <p>
+                            Uma criatura misteriosa que prefere
+                            lugares escuros e isolados.
+                        </p>
+
+                        <button
+                            class="btn-detalhes"
+                            data-nome="Dragão Negro"
+                            data-tipo="🌑 Dragão das Sombras"
+                            data-descricao="Um dragão misterioso associado à escuridão. Costuma permanecer escondido e é extremamente difícil de encontrar."
+                            data-habitat="Cavernas e florestas escuras"
+                            data-poder="Manipulação das sombras"
+                        >
+                            Ver detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- DRAGÃO VERDE -->
+
+                <article class="criatura">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Chinese_Green_Dragon_dark.png"
+                        alt="Dragão verde"
+                    >
+
+                    <div class="informacoes">
+
+                        <h3>Dragão Verde</h3>
+
+                        <p class="tipo">
+                            🌿 Dragão da Natureza
+                        </p>
+
+                        <p>
+                            Um dragão ligado às florestas e à
+                            natureza.
+                        </p>
+
+                        <button
+                            class="btn-detalhes"
+                            data-nome="Dragão Verde"
+                            data-tipo="🌿 Dragão da Natureza"
+                            data-descricao="Uma criatura ligada à natureza. Possui uma forte conexão com florestas e plantas."
+                            data-habitat="Florestas antigas"
+                            data-poder="Controle da natureza"
+                        >
+                            Ver detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- DRAGÃO CLÁSSICO -->
+
+                <article class="criatura">
+
+                    <img
+                        src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dragon_by_Henry_Justice_Ford.jpg"
+                        alt="Dragão clássico"
+                    >
+
+                    <div class="informacoes">
+
+                        <h3>Dragão Ancestral</h3>
+
+                        <p class="tipo">
+                            🐲 Dragão Lendário
+                        </p>
+
+                        <p>
+                            Uma criatura ancestral que representa
+                            força, sabedoria e mistério.
+                        </p>
+
+                        <button
+                            class="btn-detalhes"
+                            data-nome="Dragão Ancestral"
+                            data-tipo="🐲 Dragão Lendário"
+                            data-descricao="Um dos dragões mais antigos das lendas. É conhecido por sua inteligência, força e enorme experiência."
+                            data-habitat="Ruínas e montanhas"
+                            data-poder="Força ancestral"
+                        >
+                            Ver detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- JANELA DE DETALHES -->
+
+    <div id="modal" class="modal">
+
+        <div class="modal-conteudo">
+
+            <button id="fecharModal" class="fechar">
+                ×
+            </button>
+
+            <div class="modal-icone">
+                🐉
+            </div>
+
+            <h2 id="modalNome">
+                Dragão
+            </h2>
+
+            <p id="modalTipo" class="modal-tipo">
+                Tipo
+            </p>
+
+            <p id="modalDescricao" class="modal-descricao">
+                Descrição
+            </p>
+
+
+            <div class="detalhes">
+
+                <div>
+                    <span>🏔️</span>
+                    <strong>Habitat</strong>
+                    <p id="modalHabitat"></p>
+                </div>
+
+
+                <div>
+                    <span>✨</span>
+                    <strong>Poder</strong>
+                    <p id="modalPoder"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+
+        <p>
+            🐉 Catálogo de Dragões © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
